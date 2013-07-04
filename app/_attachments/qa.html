@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- 
+Robert Warren
+Term 1306
+Advanced Scalable Data Infrastructures (ASD)
+Quality Experiences
+
+Github: https://github.com/grindnmosh/Warren_Robert_ASD_1306.git
+URL: http://grind-design.com (page for new app coming soon... will be moving 1st app to a sub domain...)
+-->
+<html>
+	<head>
+		<title>Quality Experience</title>
+		<meta charset="UTF-8" />
+	</head>
+	
+	<body>
+		
+		<section data-role="page" id="qa">
+			<header data-role="header" data-position-fixed="false" ><h1 id="brand">Quality Experiences</h1></header>
+			
+			
+			<section data-role="content">
+				<header><h2>Saved QAs</h2></header>
+				<div>
+					<a href="#add" id="addNewBill"><button data-role="button" data-theme="d" value="Add Another QA">Add Another QA</button></a>
+				</div>
+				<div>
+					<button data-role="button" data-theme="a" value="Clear All QAs" id="clearAllData">Clear All QAs</button>
+				</div>
+				<div data-role="content" >
+					<div id="qaCon"></div>
+				</div>
+			</section>
+			
+			<footer data-role="footer" data-theme="d" data-position="fixed">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="https://twitter.com/grindnmosh" data-icon="info">Follow Me</a></li>
+						<li><a href="#about" data-icon="bars">About</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</section>
+
+
+		<script type="text/javascript" src="jquery1.10.js"></script>
+		<script type="text/javascript" src="jqm1.3.js"></script>
+		<script type="text/javascript" src="jquery.validate.min.js"></script>
+		<script src= "jquery.couch.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>

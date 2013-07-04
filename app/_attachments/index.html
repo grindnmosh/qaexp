@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!-- 
+Robert Warren
+Term 1306
+Advanced Scalable Data Infrastructures (ASD)
+Quality Experiences
+
+Github: https://github.com/grindnmosh/Warren_Robert_ASD_1306.git
+URL: http://grind-design.com (page for new app coming soon... will be moving 1st app to a sub domain...)
+-->
+<html>
+	<head>
+		<title>Quality Experience</title>
+		<link rel="stylesheet" href="jqm1.3.css" />
+		<link rel="stylesheet" href="grind-theme.min.css" />
+		<link rel="stylesheet" href="index.css" type= "text/css" />
+		<script src= "modernizr.custom.min.js"></script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="target-densitydpi=device-dpi" />
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="A simple way to track your Quality Assesments." />
+		<meta name="keywords" content="quality, assessment, Apple, GC Services, Mac Experts, Apple Service" />
+		<meta name="robots" content="index, follow" />
+	</head>
+	
+	<body>
+		<section data-role="page" id="home">
+			<header data-role="header" data-theme="a" data-position-fixed="false" ><h1 id="brand">Quality Experiences</h1></header>
+							
+			<section data-role="content">
+				<header><h2 id="magic"><a href="#add" class="browse" id="qualadd"><img id="quality" src="qualityfeature.jpg"></a></h2></header>
+				<a href="#view"><button data-role="button" data-theme="d" value="View QAs" id="display2" class="display"></button></a>
+			</section>
+			
+			<footer data-role="footer" data-theme="d" data-position="fixed">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="https://twitter.com/grindnmosh" data-icon="info">Follow Me</a></li>
+						<li><a href="#about" data-icon="bars">About</a></li>
+					</ul>
+				</nav>
+			</footer>				
+		</section>
+		<section data-role="page" id="add">
+			<header data-role="header" data-position-fixed="false" ><h1 id="brand">Quality Experiences</h1></header>
+			
+			<section data-role="content">
+				<form action="" id="addQa">
+		    		<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup" id="qaForm">
+							<header><h2>Add A New QA</h2></header>
+							<div data-role="fieldcontain">
+								<label for="name" >Agent Name: </label>
+							    <input type="text" data-clear-btn="true" name="name" id="name" placeholder="Robert Warren" value="">
+							</div>
+							<div data-role="fieldcontain">
+								<label for="call" >Date: </label>
+							    <input type="date" data-clear-btn="true" name="call" id="call" placeholder="12/31/2013" >
+							</div>
+							<div data-role="fieldcontain">
+						    	<label for="sale">Sale Call Type</label>
+						    	<legend>Sale Call Type</legend>
+						    	<select name="sale" id="sale" class="sale" data-theme="d" data-native-menu="false">
+							        <option data-placeholder="true" value>--Choose Sales Call Type--</option>
+									<option value="iPad Sale">iPad Sale</option>								
+									<option value="iPad No Sale">iPad No Sale</option>
+									<option value="CPU Sale" selected="selected">CPU Sale</option>
+									<option value="CPU No Sale">CPU No Sale</option>
+									<option value="Accessory/Software Sale">Accessory/Software Sale</option>
+									<option value="Accessory/Software No Sale">Accessory/Software No Sale</option>
+									<option id="otherSale" value="Other Sale">Other Sale</option>
+									<option id="otherNS" value="Other No Sale">Other No Sale</option>
+								</select>
+							</div>
+							<div data-role="fieldcontain">
+						    	<label for="qaType">QA Style</label>
+						    	<legend>QA Style</legend>
+						    	<select name="qaType" id="qaType" data-theme="d" data-native-menu="false">
+							        <option data-placeholder="true" value>--Choose QA Style--</option>
+									<option value="Listened With Agent(WAVE)">Listened With Agent(WAVE)</option>		
+									<option value="Listened(WAVE) Coached Later">Listened(WAVE) Coached Later</option>
+									<option value="Side By Side" selected="selected">Side By Side</option>
+									<option value="Coached Calibrated Call">Coached Calibrated Call</option>
+									<option value="Negative Survey">Negative Survey</option>
+									<option id="other" value="Other">Other</option>
+								</select>
+							</div>
+							<div data-role="fieldcontain">
+						        <label for="score">Score</label>
+						        <input type="range" data-theme="d" id="score"  min="0" max="100" value="80">
+							</div>
+				    		<div data-role="fieldcontain">
+						    	<label for="pip">PIP Status</label>
+						    	<legend>PIP Status</legend>
+						    	<select name="pip" id="pip" data-theme="d" data-native-menu="false">
+							        <option data-placeholder="true" value>--Select PIP Level--</option>
+									<option value="No PIP Outstanding" selected="selected">No PIP Outstanding</option>		
+									<option value="PIP With Written Warning">PIP With Written Warning</option>
+									<option value="PIP With Final Warning">PIP With Final Warning</option>
+									<option value="PIP With A 30 Day Maintain">PIP With A 30 Day Maintain</option>
+								</select>
+							</div>
+							<div data-role="fieldcontain">
+							    <label for="textArea">Notes</label>
+							    <div><textarea id="notes" class="input" placeholder="Leave comments here......"></textarea></div>
+							</div>
+						</fieldset>
+				    </div>
+				    <div>
+						<button input type="submit" id="saveQa" data-theme="d" data-role="button" value="Save QA" ></button>
+				    </div>
+				    <div>
+						<button input type="reset" id="resetMe" data-theme="b" data-role="button" value="Reset QA"></button>
+				    </div>
+				    <div>
+						<a href="#view"><button id="display" class="display" data-theme="a" data-role="button" value="Display QAs"></button></a>
+					</div>
+			    </div>
+			</form>
+
+			</section>
+			
+			<footer data-role="footer" data-theme="d" data-position="fixed">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="https://twitter.com/grindnmosh" data-icon="info">Follow Me</a></li>
+						<li><a href="#about" data-icon="bars">About</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</section>
+		<section data-role="page" id="view">
+			<header data-role="header" data-position-fixed="false" ><h1 id="brand">Quality Experiences</h1></header>
+			
+			
+			<section data-role="content">
+				<header><h2>Saved QAs</h2></header>
+				<div>
+					<a href="#add" id="addNewBill"><button data-role="button" data-theme="d" value="Add Another QA">Add Another QA</button></a>
+				</div>
+				<div>
+					<button data-role="button" data-theme="a" value="Clear All QAs" id="clearAllData">Clear All QAs</button>
+				</div>
+				<div data-role="content" >
+					<div id="qaContent"></div>
+				</div>
+			</section>
+			
+			<footer data-role="footer" data-theme="d" data-position="fixed">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="https://twitter.com/grindnmosh" data-icon="info">Follow Me</a></li>
+						<li><a href="#about" data-icon="bars">About</a></li>
+					</ul>
+				</nav>
+			</footer>
+		</section>
+		<section data-role="page" id="about">
+			<header data-role="header" data-position-fixed="false" ><h1 id="brand">Quality Experiences</h1></header>
+			
+			
+			<section data-role="content">
+				<header><h2>Grind-Design projects for Full Sail</h2></header>
+				<p>Designer:  Robert Warren</p>
+				<dl>
+					<dt><h3>Source</h3></dt>
+					<dd><p> Follow my <a href="https://github.com/grindnmosh/Warren_Robert_ASD_1306.git">github</a> for updates </p>
+					<p> See my <a href="http://grindnmosh.github.io/Warren_Robert_ASD_1306">gh-pages</a> for current results </p></dd>
+					<dt><h3>Social Networks</h3></dt>
+					<dd><p>Follow me on <a href = "https://twitter.com/grindnmosh">Twitter</a></p>
+					<p>Like Me on <a href = "https://www.facebook.com/grindnmosh">Facebook</a></p>
+					<p>+1 Me on <a href = "https://plus.google.com/115633683788706355406/">Google+</a></p></dd>
+					<dt><h3>Contact Info</h3></dt>
+					<dd><h4>For Bug and Error Reports:</h4>
+					<p>bugreports@grind-design.com</p>
+					<h4>Suggestions:</h4>
+					<p>suggestions@grind-design.com</p>
+					<h4>Site Issues:</h4>
+					<p>admin@grind-design.com</p>
+					<h4>Contact the Developer:</h4>
+					<p>grindnmosh@grind-design.com</p></dd>
+					<dt><h3>Credits</h3></dt>
+					<dd><p>All current work is mine. Any thing I borrow, with permission of course, will be listed here.</p></dd>
+				</dl>
+			</section>
+			
+			<footer data-role="footer" data-theme="d" data-position="fixed">
+				<nav data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="https://twitter.com/grindnmosh" data-icon="info">Follow Me</a></li>
+						<li><a href="#about" data-icon="bars">About</a></li>
+					</ul>
+				</nav>
+			</footer>	
+		</section>
+
+
+		<script type="text/javascript" src="jquery1.10.js"></script>
+		<script type="text/javascript" src="jqm1.3.js"></script>
+		<script type="text/javascript" src="jquery.validate.min.js"></script>
+		<script src="jquery.couch.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
